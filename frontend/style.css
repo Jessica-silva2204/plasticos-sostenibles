@@ -1,0 +1,124 @@
+/* frontend/style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #6fa8dc; /* Fondo de la nueva paleta */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  padding: 0; /* Sin márgenes adicionales */
+  margin: 0; /* Eliminar márgenes predeterminados */
+  min-height: 100vh;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Ancho máximo para el formulario */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido dentro del contenedor */
+  align-items: center; /* Alinea el contenido horizontalmente */
+  text-align: center; /* Alinea el texto al centro */
+ 
+}
+
+h1 {
+  color: #213242; /* Color oscuro para el título */
+  font-size: 22px; /* Tamaño de fuente ajustado para mayor legibilidad */
+  font-weight: 600; /* Mayor peso para el título */
+  margin-bottom: 15px; /* Espaciado hacia abajo */
+  text-transform: uppercase; /* Título en mayúsculas para destacar */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+h2 {
+  color: #2c4358; /* Color del subtítulo */
+  font-size: 18px;
+  margin-bottom: 20px;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+label {
+  font-size: 14px;
+  color: #213242; /* Color de las etiquetas */
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #37546e; /* Borde más oscuro */
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f0f8ff; /* Fondo claro para los campos */
+  width: 100%; /* Los campos ocupan todo el ancho */
+}
+
+button {
+  padding: 12px;
+  background-color: #4d759a; /* Color del botón */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+  width: 100%; /* El botón ocupa todo el ancho */
+}
+
+button:hover {
+  background-color: #2c4358; /* Color al pasar el cursor */
+}
+
+#response-message {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #213242; /* Mensajes con el color principal */
+  font-size: 14px;
+}
+
+/* Reglas para pantallas pequeñas */
+@media (max-width: 600px) {
+  body {
+    padding: 0 10px; /* Menos espacio en dispositivos pequeños */
+  }
+
+  .container {
+    padding: 15px;
+    max-width: 90%; /* Aprovecha el 90% del ancho disponible */
+    height: auto; /* Ajuste a la altura disponible */
+  }
+
+  h1 {
+    font-size: 20px; /* Ajusta el tamaño del título */
+  }
+
+  h2 {
+    font-size: 16px; /* Ajusta el tamaño del subtítulo */
+  }
+
+  input,
+  button {
+    font-size: 14px;
+    padding: 10px; /* Ajuste de tamaño para pantallas pequeñas */
+  }
+}
