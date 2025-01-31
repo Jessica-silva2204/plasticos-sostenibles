@@ -1,7 +1,5 @@
 # Proyecto: Plásticos Sustentables ♻️
 
-![Logo del Proyecto](https://via.placeholder.com/150) <!-- Reemplaza con la URL de tu logo -->
-
 Bienvenido al repositorio del proyecto **Plásticos Sustentables**, una iniciativa para promover el uso y desarrollo de materiales plásticos amigables con el medio ambiente. Este proyecto busca reducir el impacto ambiental de los plásticos tradicionales mediante soluciones innovadoras y sostenibles.
 
 ---
