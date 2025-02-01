@@ -4,10 +4,14 @@ const db = require('../backend/db');
 
 // Limpiar la base de datos antes de cada prueba
 beforeEach(async () => {
-  await db.promise().query('DELETE FROM users');
+  await db.query('DELETE FROM users'); // Limpiar la tabla de usuarios
 });
 
-// Prueba para el registro de un nuevo usuario
+// Cerrar la conexión a la base de datos después de todas las pruebas
+afterAll(async () => {
+  await db.end(); // Cerrar el pool de conexiones
+});
+
 describe('POST /register', () => {
   it('debería registrar un nuevo usuario', async () => {
     const response = await request(app)
@@ -15,7 +19,7 @@ describe('POST /register', () => {
       .send({
         username: 'testuser',
         email: 'test@example.com',
-        password: 'password123'
+        password: 'password123',
       });
 
     expect(response.statusCode).toBe(201);
@@ -29,7 +33,7 @@ describe('POST /register', () => {
       .send({
         username: 'testuser',
         email: 'test@example.com',
-        password: 'password123'
+        password: 'password123',
       });
 
     // Intentar registrar el mismo correo electrónico nuevamente
@@ -38,7 +42,7 @@ describe('POST /register', () => {
       .send({
         username: 'testuser2',
         email: 'test@example.com',
-        password: 'password456'
+        password: 'password456',
       });
 
     expect(response.statusCode).toBe(400);
